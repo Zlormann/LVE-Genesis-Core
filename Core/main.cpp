@@ -1,3 +1,5 @@
+#include "Engine/LVEVersion.h"
+
 #include <iostream>
 
 #include "Engine/LVEEngine.h"
@@ -19,7 +21,7 @@
 int main()
 {
     std::cout << "====================================\n";
-    std::cout << "      LVE Genesis Core v0.02\n";
+    std::cout << "      LVE Genesis Core v0.10.2\n";
     std::cout << "      LibreVerse Engine\n";
     std::cout << "====================================\n\n";
 
