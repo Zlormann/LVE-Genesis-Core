@@ -13,6 +13,10 @@ add_executable(
     Core/main.cpp
 
     Core/Engine/LVEEngine.cpp
+    Core/Physics/PhysicsWorld.cpp
+    Core/Physics/Collider.cpp
+    Core/Physics/GravitySystem.cpp
+    Core/Physics/Rigidbody.cpp
 
     Core/Engine/GameLoop.cpp
 
