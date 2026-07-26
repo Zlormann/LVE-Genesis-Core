@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 project(LVE_Genesis_Core)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lstdc++fs")
 
 include_directories(Core)
@@ -28,6 +28,10 @@ add_executable(
     Core/SaveSystem/SaveManager.cpp
 
     Core/SaveSystem/UniverseSaver.cpp
+
+    Core/SaveSystem/UniverseLoader.cpp
+
+    Core/World/UniverseManager.cpp
 
     Core/Player/PlayerProfile.cpp
     Core/Player/Questionnaire.cpp
