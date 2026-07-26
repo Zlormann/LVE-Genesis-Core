@@ -18,6 +18,10 @@ add_executable(
 
     Core/ProceduralGenerator/Generator.cpp
 
+    Core/ProceduralGenerator/TerrainGenerator.cpp
+
+    Core/World/Terrain/TerrainMap.cpp
+
     Core/Entities/Entity.cpp
 
     Core/SaveSystem/SaveManager.cpp

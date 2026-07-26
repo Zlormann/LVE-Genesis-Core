@@ -9,6 +9,7 @@
 #include "AI/PersonalityAnalyzer.h"
 #include "AI/WorldAnalyzer.h"
 #include "World/WorldSettings.h"
+#include "ProceduralGenerator/TerrainGenerator.h"
 
 
 int main()
@@ -47,6 +48,14 @@ int main()
         worldAI.Analyze(profile);
 
     settings.Display();
+
+
+    TerrainGenerator terrainGenerator;
+
+    TerrainMap terrain =
+        terrainGenerator.CreateTerrain();
+
+    terrain.Display();
 
 
     WorldGenerator worldSystem;
