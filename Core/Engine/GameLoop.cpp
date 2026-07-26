@@ -26,7 +26,7 @@ void GameLoop::Start()
     int frames = 0;
 
 
-    while(running && frames < 300)
+    while(running)
     {
 
         auto start =

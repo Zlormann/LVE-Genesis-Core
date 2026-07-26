@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Engine/LVEEngine.h"
+#include "Engine/GameLoop.h"
 #include "World/WorldRuntime.h"
 #include "World/WorldGenerator.h"
 #include "ProceduralGenerator/Generator.h"
@@ -122,5 +123,9 @@ int main()
     std::cout << "\nLibreVerse Engine Online\n";
 
     
-return 0;
+GameLoop gameLoop;
+
+    gameLoop.Start();
+
+    return 0;
 }
