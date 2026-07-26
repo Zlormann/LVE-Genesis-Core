@@ -26,4 +26,8 @@ add_executable(
     Core/Player/Questionnaire.cpp
 
     Core/AI/PersonalityAnalyzer.cpp
+
+    Core/AI/WorldAnalyzer.cpp
+
+    Core/World/WorldSettings.cpp
 )

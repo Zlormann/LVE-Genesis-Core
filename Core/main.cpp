@@ -7,6 +7,8 @@
 #include "SaveSystem/SaveManager.h"
 #include "Player/Questionnaire.h"
 #include "AI/PersonalityAnalyzer.h"
+#include "AI/WorldAnalyzer.h"
+#include "World/WorldSettings.h"
 
 
 int main()
@@ -37,6 +39,14 @@ int main()
 
     std::cout << "\n[WORLD] Custom Seed : "
               << customSeed << "\n";
+
+
+    WorldAnalyzer worldAI;
+
+    WorldSettings settings =
+        worldAI.Analyze(profile);
+
+    settings.Display();
 
 
     WorldGenerator worldSystem;
