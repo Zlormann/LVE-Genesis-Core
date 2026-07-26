@@ -16,6 +16,8 @@ add_executable(
 
     Core/Engine/GameLoop.cpp
 
+    Core/Engine/Modules/EngineModule.cpp
+
     Core/Input/InputManager.cpp
 
     Core/World/WorldGenerator.cpp
