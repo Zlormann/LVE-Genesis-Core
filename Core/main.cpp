@@ -5,6 +5,7 @@
 #include "ProceduralGenerator/Generator.h"
 #include "Entities/Entity.h"
 #include "SaveSystem/SaveManager.h"
+#include "SaveSystem/UniverseSaver.h"
 #include "Player/Questionnaire.h"
 #include "AI/PersonalityAnalyzer.h"
 #include "AI/WorldAnalyzer.h"
@@ -73,7 +74,17 @@ int main()
     playerEntity.Create("LibreVerse_Player");
 
 
+    UniverseSaver universeSaver;
+
+    universeSaver.SaveProfile(profile);
+
+    universeSaver.SaveWorldSeed(customSeed);
+
+    universeSaver.SaveTerrain(terrain);
+
+
     SaveManager save;
+
     save.Initialize();
 
 
