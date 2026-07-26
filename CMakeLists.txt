@@ -52,6 +52,8 @@ add_executable(
     Core/Rendering/LVEWindow.cpp
 
     Core/Rendering/Renderer2D.cpp
+    Core/Rendering/TerrainRenderer2D.cpp
+    Core/World/Terrain/TileMap.cpp
 
     Core/Camera/Camera.cpp
 
