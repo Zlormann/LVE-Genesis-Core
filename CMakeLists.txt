@@ -47,6 +47,8 @@ add_executable(
 
     Core/Systems/AISystem.cpp
 
+    Core/Systems/PhysicsSystem.cpp
+
     Core/Rendering/LVEWindow.cpp
 
     Core/Rendering/Renderer2D.cpp
