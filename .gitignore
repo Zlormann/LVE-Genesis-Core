@@ -1,0 +1,21 @@
+# Compilation
+Build/
+build/
+*.o
+*.obj
+*.exe
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Rust
+RustCore/target/
+
+# VSCodium
+.vscode/
+
+# Systèmes
+*.swp
+*~
