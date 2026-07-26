@@ -37,6 +37,12 @@ add_executable(
 
     Core/Systems/AISystem.cpp
 
+    Core/Rendering/LVEWindow.cpp
+
+    Core/Rendering/Renderer2D.cpp
+
+    Core/Camera/Camera.cpp
+
     Core/World/UniverseManager.cpp
 
     Core/Player/PlayerProfile.cpp
@@ -48,3 +54,33 @@ add_executable(
 
     Core/World/WorldSettings.cpp
 )
+
+
+
+
+
+
+# SDL2 Linux configuration
+
+execute_process(
+    COMMAND sdl2-config --cflags
+    OUTPUT_VARIABLE SDL2_CFLAGS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+execute_process(
+    COMMAND sdl2-config --libs
+    OUTPUT_VARIABLE SDL2_LIBS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+target_compile_options(
+    lve_engine PRIVATE
+    ${SDL2_CFLAGS}
+)
+
+target_link_libraries(
+    lve_engine
+    ${SDL2_LIBS}
+)
+
