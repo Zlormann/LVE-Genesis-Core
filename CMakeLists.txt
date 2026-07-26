@@ -21,4 +21,9 @@ add_executable(
     Core/Entities/Entity.cpp
 
     Core/SaveSystem/SaveManager.cpp
+
+    Core/Player/PlayerProfile.cpp
+    Core/Player/Questionnaire.cpp
+
+    Core/AI/PersonalityAnalyzer.cpp
 )

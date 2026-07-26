@@ -5,6 +5,8 @@
 #include "ProceduralGenerator/Generator.h"
 #include "Entities/Entity.h"
 #include "SaveSystem/SaveManager.h"
+#include "Player/Questionnaire.h"
+#include "AI/PersonalityAnalyzer.h"
 
 
 int main()
@@ -19,6 +21,24 @@ int main()
     engine.Initialize();
 
 
+    Questionnaire questionnaire;
+
+    PlayerProfile profile =
+        questionnaire.CreateProfile();
+
+    profile.Display();
+
+    PersonalityAnalyzer analyzer;
+
+    analyzer.Analyze(profile);
+
+    int customSeed =
+        profile.GenerateSeed();
+
+    std::cout << "\n[WORLD] Custom Seed : "
+              << customSeed << "\n";
+
+
     WorldGenerator worldSystem;
     worldSystem.Initialize();
 
@@ -30,8 +50,8 @@ int main()
     world.Display();
 
 
-    Entity player;
-    player.Create("LibreVerse_Player");
+    Entity playerEntity;
+    playerEntity.Create("LibreVerse_Player");
 
 
     SaveManager save;
