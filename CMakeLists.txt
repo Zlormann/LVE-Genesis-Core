@@ -25,6 +25,8 @@ add_executable(
     Core/Input/InputManager.cpp
 
     Core/World/WorldGenerator.cpp
+    Core/Engine/WorldLoop.cpp
+    Core/World/WorldRuntime.cpp
     Core/World/WorldData.cpp
 
     Core/ProceduralGenerator/Generator.cpp
