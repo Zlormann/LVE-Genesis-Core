@@ -5,6 +5,9 @@
 #include "ProceduralGenerator/Generator.h"
 #include "Entities/Entity.h"
 #include "SaveSystem/SaveManager.h"
+#include "ECS/EntityManager.h"
+#include "Systems/MovementSystem.h"
+#include "Systems/AISystem.h"
 #include "SaveSystem/UniverseSaver.h"
 #include "Player/Questionnaire.h"
 #include "AI/PersonalityAnalyzer.h"
@@ -81,6 +84,24 @@ int main()
     universeSaver.SaveWorldSeed(customSeed);
 
     universeSaver.SaveTerrain(terrain);
+
+
+    EntityManager entityManager;
+
+    entityManager.CreateEntity("LibreVerse_Player");
+    entityManager.CreateEntity("Wolf");
+    entityManager.CreateEntity("Ancient_Tree");
+    entityManager.CreateEntity("Village");
+
+
+    entityManager.DisplayEntities();
+
+
+    MovementSystem movement;
+    AISystem ai;
+
+    movement.Update();
+    ai.Update();
 
 
     SaveManager save;

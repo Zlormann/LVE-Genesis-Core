@@ -31,6 +31,12 @@ add_executable(
 
     Core/SaveSystem/UniverseLoader.cpp
 
+    Core/ECS/EntityManager.cpp
+
+    Core/Systems/MovementSystem.cpp
+
+    Core/Systems/AISystem.cpp
+
     Core/World/UniverseManager.cpp
 
     Core/Player/PlayerProfile.cpp
