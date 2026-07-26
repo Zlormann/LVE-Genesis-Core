@@ -14,6 +14,10 @@ add_executable(
 
     Core/Engine/LVEEngine.cpp
 
+    Core/Engine/GameLoop.cpp
+
+    Core/Input/InputManager.cpp
+
     Core/World/WorldGenerator.cpp
     Core/World/WorldData.cpp
 
