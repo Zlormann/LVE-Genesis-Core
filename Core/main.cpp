@@ -22,6 +22,8 @@
 
 int main()
 {
+    GameLoop gameLoop;
+
     std::cout << "====================================\n";
     std::cout << "      LVE Genesis Core v0.12.3\n";
     std::cout << "      LibreVerse Engine\n";
@@ -35,6 +37,17 @@ int main()
     WorldRuntime runtime;
 
     runtime.Initialize(84739201);
+
+    gameLoop.SetWorld(&runtime);
+
+    std::cout << "[OK] GameLoop connected to WorldRuntime\n";
+
+    gameLoop.Start();
+
+
+    std::cout << "[OK] GameLoop connected to WorldRuntime\n";
+
+
 
     std::cout << "[OK] World Runtime Startup\n";
 
@@ -123,9 +136,7 @@ int main()
     std::cout << "\nLibreVerse Engine Online\n";
 
     
-GameLoop gameLoop;
 
-    gameLoop.Start();
 
     return 0;
 }

@@ -8,6 +8,7 @@ WorldRuntime::WorldRuntime()
 {
 
     seed=0;
+    worldTime=0;
 
 }
 
@@ -37,6 +38,16 @@ void WorldRuntime::Initialize(unsigned int worldSeed)
 
 void WorldRuntime::Update()
 {
+
+    worldTime++;
+
+    if(worldTime % 60 == 0)
+    {
+        std::cout
+        << "[WORLD] Runtime Tick : "
+        << worldTime
+        << "\n";
+    }
 
     // Future :
     // météo

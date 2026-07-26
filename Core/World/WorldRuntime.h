@@ -14,6 +14,8 @@ private:
 
     unsigned int seed;
 
+    unsigned long long worldTime;
+
 
 public:
 

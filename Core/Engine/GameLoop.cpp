@@ -9,10 +9,20 @@ GameLoop::GameLoop()
 {
 
     running = false;
+    world = nullptr;
 
 }
 
 
+
+
+
+void GameLoop::SetWorld(WorldRuntime* runtime)
+{
+
+    world = runtime;
+
+}
 
 void GameLoop::Start()
 {
@@ -32,6 +42,12 @@ void GameLoop::Start()
         auto start =
         std::chrono::high_resolution_clock::now();
 
+
+
+        if(world)
+        {
+            world->Update();
+        }
 
 
         SDL_Event event;
