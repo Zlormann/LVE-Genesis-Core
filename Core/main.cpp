@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Engine/LVEEngine.h"
+#include "World/WorldRuntime.h"
 #include "World/WorldGenerator.h"
 #include "ProceduralGenerator/Generator.h"
 #include "Entities/Entity.h"
@@ -21,13 +22,21 @@
 int main()
 {
     std::cout << "====================================\n";
-    std::cout << "      LVE Genesis Core v0.10.2\n";
+    std::cout << "      LVE Genesis Core v0.12.3\n";
     std::cout << "      LibreVerse Engine\n";
     std::cout << "====================================\n\n";
 
 
     LVEEngine engine;
     engine.Initialize();
+
+
+    WorldRuntime runtime;
+
+    runtime.Initialize(84739201);
+
+    std::cout << "[OK] World Runtime Startup\n";
+
 
 
     Questionnaire questionnaire;
@@ -74,7 +83,6 @@ int main()
 
     world.Display();
 
-
     Entity playerEntity;
     playerEntity.Create("LibreVerse_Player");
 
@@ -113,5 +121,6 @@ int main()
 
     std::cout << "\nLibreVerse Engine Online\n";
 
-    return 0;
+    
+return 0;
 }
