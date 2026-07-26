@@ -14,6 +14,7 @@ add_executable(
     Core/Engine/LVEEngine.cpp
 
     Core/World/WorldGenerator.cpp
+    Core/World/WorldData.cpp
 
     Core/ProceduralGenerator/Generator.cpp
 

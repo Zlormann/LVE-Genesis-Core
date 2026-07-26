@@ -19,12 +19,15 @@ int main()
     engine.Initialize();
 
 
-    WorldGenerator world;
-    world.Initialize();
+    WorldGenerator worldSystem;
+    worldSystem.Initialize();
 
 
     Generator generator;
-    generator.Initialize();
+
+    WorldData world = generator.Generate(84739201);
+
+    world.Display();
 
 
     Entity player;
